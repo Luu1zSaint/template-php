@@ -4,7 +4,7 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Saint\\Templates\\": "src/"
+            "app\\": "app/"
         }
     },
     "minimum-stability": "stable",
