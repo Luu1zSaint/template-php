@@ -5,7 +5,10 @@
     "autoload": {
         "psr-4": {
             "app\\": "app/"
-        }
+        },
+        "files": [
+            "app/helpers/helpers.php"
+        ]
     },
     "minimum-stability": "stable",
     "require": {}
