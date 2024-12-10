@@ -1,11 +1,10 @@
 <?php
 return [
     'GET' => [
-        '/' => 'HomeController@index',
-        '/login' => 'LoginController@index'
+        '/' => 'HomeController@index'
 
     ],
     'POST' => [
-
+        '/login' => 'LoginController@index'
     ]
 ];
