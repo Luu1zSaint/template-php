@@ -3,7 +3,6 @@
 namespace app\classes;
 
 use Exception;
-use Throwable;
 
 class Router
 {
