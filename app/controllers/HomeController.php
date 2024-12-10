@@ -2,10 +2,14 @@
 
 namespace app\controllers;
 
+
 class HomeController
 {
     public function index()
     {
-        var_dump("Index");
+        viewExecuter('home', [
+            'userName' => 'Luizin',
+            'userEmail' => 'luizin@gmail.com'
+        ]);
     }
 }
