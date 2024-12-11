@@ -1,6 +1,7 @@
 <?php
 
 use app\classes\Router;
+use app\classes\Session;
 use app\views\view;
 
 function routerExecute()
@@ -27,4 +28,14 @@ function viewExecuter(string $view, array $data = [])
     {
         var_dump($th->getMessage());
     }
+}
+function flash(string $index)
+{
+    $msg = Session::getFlash($index);
+
+    return "<p>{$msg}</p>";
+}
+function redirect(string $to)
+{
+    return header('Location: '.$to);
 }

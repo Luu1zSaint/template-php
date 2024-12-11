@@ -28,7 +28,7 @@
         <section class="container-right">
 
             <h1>Faça seu login</h1>
-
+            <?=(flash('emptyFields') ?? '')?>
             <form class="form-login" action="/login" method="post">
                 <div>
                     <label>Usuário:</label>

@@ -6,8 +6,10 @@ class Session
 {
     public static function set(string $index, mixed $value)
     {
-        $_SESSION[$index] = $value;
-
+        if(!self::has($index))
+        {
+            $_SESSION[$index] = $value;
+        }
     }
     public static function get(string $index)
     {
@@ -33,5 +35,17 @@ class Session
     {
         session_destroy();
         $_SESSION = [];
+    }
+
+    public static function getFlash(string $index)
+    {
+        if(self::has($index))
+        {
+            $msgFlash = $_SESSION[$index];
+
+            unset($_SESSION[$index]);
+
+            return $msgFlash;
+        }
     }
 }
