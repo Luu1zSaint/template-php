@@ -19,6 +19,20 @@ class AuthService
         }
     }
 
+    public static function checkAuth(string $type)
+    {
+        switch ($type) {
+            case 'auth':
+                if(!Session::has('login')){
+                    redirect('/');
+                }
+                break;
+            
+            default:
+                break;
+        }
+    }
+
     public static function sanitizeString(string $input)
     {
         return htmlspecialchars(trim($input), ENT_QUOTES, 'UTF-8');
