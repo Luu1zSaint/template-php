@@ -28,7 +28,7 @@ class LoginController
             
             Session::set('login', true);
             unset($user->password);
-            Session::set('User', $user);
+            Session::set('id', $user->id);
             
             return redirect('/dashboard');
 
