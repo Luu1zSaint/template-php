@@ -29,15 +29,16 @@
 
             <h1>Faça seu login</h1>
             <?=(flash('emptyFields') ?? '')?>
+            <?=(flash('invalidUser') ?? '')?>
+
             <form class="form-login" action="/login" method="post">
                 <div>
                     <label>Usuário:</label>
-                    <input type="text" name="email" placeholder="Ex.: usuarioteste" class="input input-dark">
+                    <input type="email" name="email" class="input input-dark" value="luizroberto44630@gmail.com">
                 </div>
                 <div id="passwordContainer">
                     <label>Senha:</label>
-                    <input id="password" name="password" type="password" placeholder="Ex.: senhateste"
-                        class="input input-dark">
+                    <input id="password" name="password" type="password" class="input input-dark" value="luizin">
                     <i data-feather="eye-off" class="iconFeather"></i>
                 </div>
                 <button class="btn btn-login">Entrar</button>

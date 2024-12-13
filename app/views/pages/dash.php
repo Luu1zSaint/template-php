@@ -40,7 +40,7 @@
         <section class="container-section-principal">
             <i data-feather="menu" id="menuMobile"></i>
             <article class="container-section-principal-header">
-                <h1>Olá <?= $userName?></h1>
+                <h1>Olá <?= $userData->firstName ?></h1>
                 <h3>Bem-vindo novamente!</h3>
             </article>
 
